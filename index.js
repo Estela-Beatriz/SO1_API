@@ -3,7 +3,7 @@ const env = require('dotenv').config();
 const cors  = require('cors');
 const morgan = require('morgan');
 const app = new express();
-const PORT = 3000 || process.env.PORT;
+const PORT = process.env.PORT || 3000 ;
 const mongodb = require('./src/database/mongo');
 
 app.use(express.json({ extended: true }))
