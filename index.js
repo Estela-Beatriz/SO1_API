@@ -18,8 +18,6 @@ app.use((req, res, next) => {
     next();
 });
 
-
-
 const userMongoRoutes = require('./src/routes/userMongo.routes');
 const userRedisRoutes = require('./src/routes/userRedis.routes');
 

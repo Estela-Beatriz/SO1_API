@@ -35,7 +35,7 @@ module.exports = {
                     perc: { $divide: [{ $multiply: [100, "$count"] }, all] }
                 }
             }*/
-        ]).catch((e)=>e)
+        ]).sort( { "_id": 1 } ).catch((e)=>e)
         res.send(users);   
     },
 
@@ -53,7 +53,7 @@ module.exports = {
                     _id: "$location"
                 }
             }
-        ]).catch((e)=>e)
+        ]).sort( { "_id": 1 } ).catch((e)=>e)
         res.send(users);   
     },
     //limpia la base
